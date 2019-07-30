@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- <script src="./main.js" defer></script> -->
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root">Count 0</div>
+    <button id="button">Button</button>
+    <button id="button2">Button</button>
+
+    <script>
+      let div = document.getElementById("root");
+      console.log(div);
+      let button = document.getElementById("button");
+      let button2 = document.getElementById("button2");
+
+      button.addEventListener("click", () => {
+        fetch("http://127.0.0.1:5000/api/users")
+          .then(response => response.json())
+          .then(data => {
+            let arr = data.map(element => element.name);
+
+            console.log(arr);
+
+            return (div.innerText = `Count ${arr}`);
+          });
+      });
+      button2.addEventListener("click", () => {
+        let user = {
+          name: "John",
+          age: 99
+        };
+
+        fetch("http://127.0.0.1:5000/api/user")
+          .then(response => response.json())
+          .then(data => JSON.stringify(user));
+      });
+    </script>
+  </body>
+</html>
