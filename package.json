@@ -1,0 +1,23 @@
+{
+  "name": "test-api_maksymenko",
+  "version": "1.0.0",
+  "description": "nodeJsPractice",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Onefun1/test-api_maksymenko.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Onefun1/test-api_maksymenko/issues"
+  },
+  "homepage": "https://github.com/Onefun1/test-api_maksymenko/",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
