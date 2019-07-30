@@ -9,11 +9,13 @@ const users = [
 ];
 
 app.get("/api/users", function(req, res) {
+  res.set("Access-Control-Allow-Origin", "*");
   res.send(JSON.stringify(users));
 });
 
 app.get("/api/user", function(req, res) {
-  res.send("User eas added");
+  res.set("Access-Control-Allow-Origin", "*");
+  res.send("User was added");
 });
 
 app.listen(port, function() {
