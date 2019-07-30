@@ -35,9 +35,14 @@
           age: 99
         };
 
-        fetch("https://test-api-maksymenko.herokuapp.com/api/user").then(data =>
-          JSON.stringify(user)
-        );
+        fetch("https://test-api-maksymenko.herokuapp.com/api/user", {
+          method: "POST",
+          headers: {
+            Accept: "application/json, text/plain, */*",
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(user)
+        });
       });
     </script>
   </body>
