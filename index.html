@@ -19,7 +19,7 @@
       let button2 = document.getElementById("button2");
 
       button.addEventListener("click", () => {
-        fetch("http://127.0.0.1:5000/api/users")
+        fetch("https://test-api-maksymenko.herokuapp.com/api/users")
           .then(response => response.json())
           .then(data => {
             let arr = data.map(element => element.name);
@@ -35,7 +35,7 @@
           age: 99
         };
 
-        fetch("http://127.0.0.1:5000/api/user")
+        fetch("https://test-api-maksymenko.herokuapp.com/api/user")
           .then(response => response.json())
           .then(data => JSON.stringify(user));
       });

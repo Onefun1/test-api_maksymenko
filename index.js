@@ -12,6 +12,10 @@ app.get("/api/users", function(req, res) {
   res.send(JSON.stringify(users));
 });
 
+app.get("/api/user", function(req, res) {
+  res.send("User eas added");
+});
+
 app.listen(port, function() {
   console.log(`App listening on port http://127.0.0.1:${port}`);
 });
